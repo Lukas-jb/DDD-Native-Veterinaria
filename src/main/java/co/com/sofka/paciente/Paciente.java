@@ -4,24 +4,27 @@ import co.com.sofka.Generic.Nombre;
 import co.com.sofka.Generic.Telefono;
 import co.com.sofka.atencionVeterinaria.Values.IdPaciente;
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.paciente.Values.IdAtencion;
 import co.com.sofka.paciente.Values.IdMascota;
 import co.com.sofka.paciente.Values.IdPropietario;
 import co.com.sofka.paciente.event.*;
-import co.com.sofka.profesional.Values.Cedula;
-
-import java.util.Objects;
 
 public class Paciente extends AggregateEvent<IdPaciente> {
 
-    protected IdPropietario idPropietario;
-    protected IdAtencion idAtencion;
+    protected Propietario propietario;
+    protected Mascota mascota;
     protected IdMascota idMascota;
+    protected IdAtencion idAtencion;
 
-    public Paciente(IdPaciente entityId, Propietario propietario) {
+
+    public Paciente(IdPaciente entityId, Propietario propietario, Mascota idMascota,IdAtencion idAtencion) {
         super(entityId);
-        appendChange(new PacienteCreado(entityId, propietario)).apply();
+        appendChange(new PacienteCreado(entityId, propietario, idMascota, idAtencion)).apply();
+    }
+
+    public Paciente(IdPaciente entityId){
+        super(entityId);
+        subscribe(new pacienteChange(this));
     }
 
     public void actualizarPropietario(IdPropietario idPropietario) {

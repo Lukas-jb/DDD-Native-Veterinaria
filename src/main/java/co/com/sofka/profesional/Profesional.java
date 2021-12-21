@@ -8,17 +8,26 @@ import co.com.sofka.profesional.Values.IdProfecional;
 import co.com.sofka.profesional.Values.TarjetaProfesional;
 import co.com.sofka.profesional.event.*;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
 public class Profesional extends AggregateEvent<IdProfecional> {
+
+
     protected Set<MedicoVeterinario> auxiliaresVeterinarios;
     protected Set<AuxiliarVeterinario> medicosVeterinarios;
 
-    public Profesional(IdProfecional entityId) {
+    public Profesional(IdProfecional entityId, List<MedicoVeterinario> MedicoVeterinario, List<AuxiliarVeterinario> AuxiliarVeterinario) {
         super(entityId);
         appendChange(new ProfesionalCreado(entityId)).apply();
     }
+
+    private Profesional(IdProfecional entityId){
+        super(entityId);
+        subscribe(new profesionalCange(this));
+    }
+
 
     public void AgregarAuxiliarVeterinario(Cedula entityId, Nombre nombre, Telefono telefono) {
         Objects.nonNull(entityId);
