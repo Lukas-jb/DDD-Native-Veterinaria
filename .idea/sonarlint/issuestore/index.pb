@@ -1,6 +1,4 @@
 
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -28,8 +26,6 @@ j
 :src/main/java/co/com/sofka/paciente/Values/IdAtencion.java,b\3\b365098b2fa12f25909a84ff8a99016f6065fdaa
 i
 9src/main/java/co/com/sofka/paciente/Values/Microchip.java,9\1\918ef30a2cd76754a6ff97aa63c681aacac2017a
-d
-4src/main/java/co/com/sofka/paciente/Values/Sexo.java,0\d\0da3cfde669f0aec795b357bd27f8155e0d008cb
 g
 7src/main/java/co/com/sofka/paciente/Values/Especie.java,a\9\a9ef12138c4cd0f7bc6d0da79709d07d2b3406b1
 ^
@@ -50,10 +46,6 @@ u
 Esrc/main/java/co/com/sofka/atencionVeterinaria/Values/CriterioDX.java,4\9\497911a661ffd0ed753d98fc4ab4cfd1b98ea706
 r
 Bsrc/main/java/co/com/sofka/atencionVeterinaria/HistoriClinica.java,b\4\b41cdc47fd63bc42e542874b764a6079c5146719
-o
-?src/main/java/co/com/sofka/profesional/AuxiliarVeterinario.java,9\9\99864271674e90d378b31d63c8f3f2ddb14f418f
-m
-=src/main/java/co/com/sofka/profesional/MedicoVeterinario.java,f\4\f480930a26b894767ab199e2c82a2098b3a2a091
 q
 Asrc/main/java/co/com/sofka/atencionVeterinaria/FormulaMedica.java,8\f\8fb4242dbb5546cdfc222af73a258bbd2b9054b6
 z
@@ -62,22 +54,12 @@ Jsrc/main/java/co/com/sofka/profesional/nombreDeVeterinarioActualizado.java,3\8
 Rsrc/main/java/co/com/sofka/profesional/event/telefonoDeVeterinarioActualizado.java,0\c\0c787e118a55139a1795e1133bca2bd3e56d0ad5
 
 Osrc/main/java/co/com/sofka/profesional/event/telefonoDeAuxiliarActualizado.java,0\9\090ee0ccf5008a2fa2188101c567e114d736e641
-{
-Ksrc/main/java/co/com/sofka/profesional/event/MedicoVeterinarioAgregado.java,2\e\2ec38d5fa9c3f954e97892f873ad2d545858b799
 }
 Msrc/main/java/co/com/sofka/profesional/event/nombreDeAuxiliarActualizado.java,7\4\744ba6f259500836586dd00efba23ab380ea865f
-s
-Csrc/main/java/co/com/sofka/profesional/event/ProfesionalCreado.java,6\5\65b284520fd65002fd6588a0e89c120444516520
 €
 Psrc/main/java/co/com/sofka/atencionVeterinaria/event/veterinarioActualizado.java,6\2\62d6301ae2c4b97dcaa1f252c9a896b278852c9f
 w
 Gsrc/main/java/co/com/sofka/atencionVeterinaria/AtencionVeterinaria.java,7\7\7727e91a55609000a51750d81ab724d6c0471326
-€
-Psrc/main/java/co/com/sofka/paciente/event/PropietarioDeLaMascotaActualizado.java,1\7\170352204307794417a394dcf0a6cc7b7a39025b
-{
-Ksrc/main/java/co/com/sofka/paciente/event/nombreDeLaMascotaActualizado.java,5\8\58ff43a8a5f13b4e183bcf331d739ad306e37b3e
-€
-Psrc/main/java/co/com/sofka/paciente/event/telefonoDelPropietarioActualizado.java,8\4\8448b08a3140dc9d61cc069530f0ccf4c156f19a
 †
 Vsrc/main/java/co/com/sofka/atencionVeterinaria/event/AtencionVeterinariaRealizada.java,7\1\7169af6a981cf928632b68496de9f8a60ea75c25
 ‰
@@ -90,7 +72,3 @@ Jsrc/main/java/co/com/sofka/atencionVeterinaria/event/pacienteAsociado.java,6\f
 ]src/main/java/co/com/sofka/atencionVeterinaria/event/ReporteDeHistoriaClinicaActualizado.java,1\d\1dcfc439f1a50697c8ca5652229bcc7ae23ecfe5
 }
 Msrc/main/java/co/com/sofka/atencionVeterinaria/event/profecionalAsociado.java,7\c\7c313dfdce5e59ff8b078ded76173de6b7ccebc4
-`
-0src/main/java/co/com/sofka/paciente/Mascota.java,a\4\a4db4094833b6b0a54c3ee1cbc089472ea6c3630
-}
-Msrc/main/java/co/com/sofka/profesional/event/AuxiliarVeterinarioAgregado.java,c\2\c2c09d51a2071e883bf8a874fa25f0ebb328d804

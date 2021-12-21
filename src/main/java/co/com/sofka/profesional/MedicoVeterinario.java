@@ -11,9 +11,9 @@ import java.util.Objects;
 
 public class MedicoVeterinario extends Entity<Cedula> {
 
-    private Nombre nombre;
-    private  TarjetaProfesional tarjetaProfesional;
-    private  Telefono telefono;
+    protected Nombre nombre;
+    protected  TarjetaProfesional tarjetaProfesional;
+    protected  Telefono telefono;
 
     public MedicoVeterinario(Cedula entityId, Nombre nombre, TarjetaProfesional tarjetaProfesional, Telefono telefono) {
         super(entityId);

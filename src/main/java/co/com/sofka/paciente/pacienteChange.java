@@ -1,22 +1,33 @@
 package co.com.sofka.paciente;
 
-import co.com.sofka.Generic.Nombre;
-import co.com.sofka.atencionVeterinaria.Values.IdPaciente;
 import co.com.sofka.domain.generic.EventChange;
-import co.com.sofka.paciente.event.PacienteCreado;
-import co.com.sofka.paciente.event.nombreDelPropietarioActualizado;
-import co.com.sofka.profesional.event.ProfesionalCreado;
+import co.com.sofka.paciente.event.*;
 
 public class pacienteChange extends EventChange {
     public pacienteChange(Paciente paciente) {
-        apply((PacienteCreado event) -> {
-            paciente.propietario = event.getPropietario();
-            paciente.mascota = event.getIdmascota();
-            paciente.idAtencion = event.getIdAtencion();
 
+        apply((PacienteCreado event) -> {
+            paciente.registrado = event.getRegistrado();
         });
-        apply((nombreDelPropietarioActualizado event) -> {
-            paciente.propietario = event.Nombre();
+        apply((mascotaAgregada event) -> {
+            paciente.mascota.sexo = event.getSexo();
+            paciente.mascota.especie = event.getEspecie();
+            paciente.mascota.nombre = event.getNombre();
         });
+        apply((propietarioAgregado event) -> {
+            paciente.propietario.nombre = event.getNombre();
+            paciente.propietario.telefono = event.getTelefono();
+        });
+        apply((nombreDeLaMascotaActualizado event) -> {
+            paciente.mascota.nombre = event.getNombre();
+        });
+
+        apply((telefonoDelPropietarioActualizado event) -> {
+            paciente.propietario.telefono = event.getTelefono();
+        });
+        apply((nombreDelPropietarioActualizado event)->{
+            paciente.propietario.nombre = event.getNombre();
+        });
+
     }
 }

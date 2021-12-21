@@ -8,24 +8,23 @@ import co.com.sofka.profesional.Values.IdProfecional;
 import co.com.sofka.profesional.Values.TarjetaProfesional;
 import co.com.sofka.profesional.event.*;
 
-import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
 public class Profesional extends AggregateEvent<IdProfecional> {
 
 
-    protected Set<MedicoVeterinario> auxiliaresVeterinarios;
-    protected Set<AuxiliarVeterinario> medicosVeterinarios;
+    protected MedicoVeterinario medicosVeterinarios;
+    protected Set<AuxiliarVeterinario> auxiliaresVeterinarios;
 
-    public Profesional(IdProfecional entityId, List<MedicoVeterinario> MedicoVeterinario, List<AuxiliarVeterinario> AuxiliarVeterinario) {
+    public Profesional(IdProfecional entityId, MedicoVeterinario MedicoVeterinario) {
         super(entityId);
-        appendChange(new ProfesionalCreado(entityId)).apply();
+        appendChange(new ProfesionalCreado(entityId, MedicoVeterinario)).apply();
     }
 
     private Profesional(IdProfecional entityId){
         super(entityId);
-        subscribe(new profesionalCange(this));
+        subscribe(new profesionalChange(this));
     }
 
 
@@ -36,25 +35,21 @@ public class Profesional extends AggregateEvent<IdProfecional> {
         appendChange(new AuxiliarVeterinarioAgregado(entityId, nombre, telefono)).apply();
     }
 
-    public void AgregarMedicoVeterinario(Cedula entityId, Nombre nombre, TarjetaProfesional tarjetaProfesional, Telefono telefono) {
-        Objects.nonNull(entityId);
+      public void actualizarNombreAuxiliar(Nombre nombre){
         Objects.nonNull(nombre);
-        Objects.nonNull(tarjetaProfesional);
-        Objects.nonNull(telefono);
-        appendChange(new MedicoVeterinarioAgregado(entityId, nombre, telefono)).apply();
-    }
-
-    public void actualizarNombreAuxiliar(Nombre nombre){
         appendChange(new nombreDeAuxiliarActualizado(nombre)).apply();
     }
     public void actualizarTelefonoAuxiliar(Telefono telefono){
+        Objects.nonNull(telefono);
         appendChange(new telefonoDeAuxiliarActualizado(telefono)).apply();
             }
 
     public void actualizarNombreVeterinario(Nombre nombre){
+        Objects.nonNull(nombre);
         appendChange(new nombreDeVeterinarioActualizado(nombre)).apply();
     }
     public void actualizarTelefonoVeterinario(Telefono telefono){
+        Objects.nonNull(telefono);
         appendChange(new telefonoDeVeterinarioActualizado(telefono)).apply();
     }
 

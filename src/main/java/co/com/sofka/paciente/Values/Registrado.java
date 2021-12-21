@@ -2,9 +2,10 @@ package co.com.sofka.paciente.Values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class Microchip implements ValueObject<String> {
+public class Registrado implements ValueObject<Boolean> {
     @Override
-    public String value() {
-        return null;
+    public Boolean value() {
+        return false;
     }
+
 }

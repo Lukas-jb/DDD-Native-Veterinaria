@@ -4,14 +4,15 @@ import co.com.sofka.Generic.Telefono;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class telefonoDelPropietarioActualizado extends DomainEvent {
-    private co.com.sofka.Generic.Telefono Telefono;
+    private final Telefono Telefono;
 
     public telefonoDelPropietarioActualizado(Telefono telefono) {
-        super("sofka.paciente.telefonodelpropietarioactualizado");
-        this.Telefono = telefono;
+        super("sofka.paciente.telefonoDelPropietarioActualizado");
+        this.Telefono=telefono;
+
     }
 
-    public co.com.sofka.Generic.Telefono Telefono() {
+    public co.com.sofka.Generic.Telefono getTelefono() {
         return Telefono;
     }
 }

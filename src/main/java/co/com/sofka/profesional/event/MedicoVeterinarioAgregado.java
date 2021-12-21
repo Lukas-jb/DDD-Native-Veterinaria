@@ -4,28 +4,38 @@ import co.com.sofka.Generic.Nombre;
 import co.com.sofka.Generic.Telefono;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.profesional.Values.Cedula;
+import co.com.sofka.profesional.Values.TarjetaProfesional;
 
 public class MedicoVeterinarioAgregado extends DomainEvent {
-    private  Cedula entityId;
-    private  Nombre nombre;
-    private  Telefono telefono;
 
-    public MedicoVeterinarioAgregado(Cedula entityId, Nombre nombre, Telefono telefono) {
+
+    protected final Cedula entityId;
+    protected  Nombre nombre;
+    protected final TarjetaProfesional tarjetaProfesional;
+    protected  Telefono telefono;
+
+    public MedicoVeterinarioAgregado(Cedula entityId, Nombre nombre, TarjetaProfesional tarjetaProfesional, Telefono telefono) {
         super("sofka.profesional.MedicoVeterinarioAgregado");
+
         this.entityId = entityId;
         this.nombre = nombre;
+        this.tarjetaProfesional = tarjetaProfesional;
         this.telefono = telefono;
     }
 
-    public Cedula EntityId() {
+    public Cedula getEntityId() {
         return entityId;
     }
 
-    public Nombre Nombre() {
+    public Nombre getNombre() {
         return nombre;
     }
 
-    public Telefono Telefono() {
+    public TarjetaProfesional getTarjetaProfesional() {
+        return tarjetaProfesional;
+    }
+
+    public Telefono getTelefono() {
         return telefono;
     }
 }

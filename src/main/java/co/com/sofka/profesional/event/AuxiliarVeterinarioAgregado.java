@@ -6,9 +6,9 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.profesional.Values.Cedula;
 
 public class AuxiliarVeterinarioAgregado extends DomainEvent {
-    private  Cedula entityId;
-    private  Nombre nombre;
-    private  Telefono telefono;
+    protected  Cedula entityId;
+    protected  Nombre nombre;
+    protected  Telefono telefono;
 
     public AuxiliarVeterinarioAgregado(Cedula entityId, Nombre nombre, Telefono telefono) {
         super("sofka.profesional.AuxiliarVeterinarioAgregado");

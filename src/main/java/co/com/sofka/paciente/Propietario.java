@@ -24,11 +24,11 @@ public class Propietario extends Entity<IdPropietario> {
         this.telefono = Objects.requireNonNull(telefono);
     }
 
-    public Nombre Nombre() {
+    public Nombre nombre() {
         return nombre;
     }
 
-    public Telefono Telefono() {
+    public Telefono telefono() {
         return telefono;
     }
 }
