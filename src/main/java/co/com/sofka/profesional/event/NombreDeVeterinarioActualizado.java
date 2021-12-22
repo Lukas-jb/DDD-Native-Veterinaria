@@ -1,10 +1,10 @@
-package co.com.sofka.profesional;
+package co.com.sofka.profesional.event;
 
 import co.com.sofka.Generic.Nombre;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.profesional.Values.Cedula;
 
-public class nombreDeVeterinarioActualizado extends DomainEvent {
+public class NombreDeVeterinarioActualizado extends DomainEvent {
     private final Nombre Nombre;
     private final Cedula Cedula;
 
@@ -12,7 +12,7 @@ public class nombreDeVeterinarioActualizado extends DomainEvent {
         return Cedula;
     }
 
-    public nombreDeVeterinarioActualizado(Cedula entityId, Nombre nombre) {
+    public NombreDeVeterinarioActualizado(Cedula entityId, Nombre nombre) {
         super("sofka.profesional.nombreDeVeterinarioActualizado");
         this.Cedula = entityId;
         this.Nombre = nombre;

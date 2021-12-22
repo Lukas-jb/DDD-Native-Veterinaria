@@ -8,13 +8,13 @@ public class AtencionVeterinariaChange extends EventChange {
         apply((AtencionVeterinariaRealizada event) -> {
             atencionVeterinaria.historiClinica = event.getHistoriClinica();
         });
-        apply((pacienteAsociado event) -> {
+        apply((PacienteAsociado event) -> {
             atencionVeterinaria.paciente = event.IdPaciente();
         });
-        apply((profecionalAsociado event) -> {
+        apply((ProfecionalAsociado event) -> {
             atencionVeterinaria.profecional = event.IdProfecional();
         });
-        apply((veterinarioActualizado event) -> {
+        apply((VeterinarioActualizado event) -> {
             atencionVeterinaria.profecional = event.IdVeterinario();
         });
         apply((fortmulaMedicaAgregada event) -> {

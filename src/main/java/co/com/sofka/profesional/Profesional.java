@@ -6,10 +6,8 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.profesional.Values.Cedula;
 import co.com.sofka.profesional.Values.IdProfecional;
-import co.com.sofka.profesional.Values.TarjetaProfesional;
 import co.com.sofka.profesional.event.*;
 
-import java.security.cert.CertSelector;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,18 +44,18 @@ public class Profesional extends AggregateEvent<IdProfecional> {
 
     public void actualizarNombreAuxiliar(Cedula entityId, Nombre nombre) {
         Objects.nonNull(nombre);
-        appendChange(new nombreDeAuxiliarActualizado(entityId, nombre)).apply();
+        appendChange(new NombreDeAuxiliarActualizado(entityId, nombre)).apply();
     }
 
     public void actualizarNombreVeterinario(Cedula entityId,Nombre nombre) {
         Objects.nonNull(entityId);
         Objects.nonNull(nombre);
-        appendChange(new nombreDeVeterinarioActualizado(entityId,nombre)).apply();
+        appendChange(new NombreDeVeterinarioActualizado(entityId,nombre)).apply();
     }
 
     public void actualizarTelefonoVeterinario(Cedula entityId,Telefono telefono) {
         Objects.nonNull(telefono);
-        appendChange(new telefonoDeVeterinarioActualizado(entityId, telefono)).apply();
+        appendChange(new TelefonoDeVeterinarioActualizado(entityId, telefono)).apply();
     }
 
 

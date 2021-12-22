@@ -45,15 +45,15 @@ public class AtencionVeterinaria extends AggregateEvent<IdAtencion> {
     }
     public void asociarPaciente(IdAtencion entityId,IdPaciente idPaciente){
         Objects.nonNull(idPaciente);
-        appendChange(new pacienteAsociado(entityId,idPaciente)).apply();
+        appendChange(new PacienteAsociado(entityId,idPaciente)).apply();
     }
     public void asociarProfecional (IdAtencion entityId,IdVeterinario idProfecional){
         Objects.nonNull(idProfecional);
-        appendChange(new profecionalAsociado(entityId,idProfecional)).apply();
+        appendChange(new ProfecionalAsociado(entityId,idProfecional)).apply();
     }
     public void actualizarVeterinario(IdAtencion entityId,IdVeterinario idVeterinario){
         Objects.nonNull(idVeterinario);
-        appendChange(new veterinarioActualizado(entityId,idVeterinario)).apply();
+        appendChange(new VeterinarioActualizado(entityId,idVeterinario)).apply();
     }
     public void actualizarDescripcionFormula(IdAtencion entityId,Descripcion descripcion){
         Objects.nonNull(descripcion);

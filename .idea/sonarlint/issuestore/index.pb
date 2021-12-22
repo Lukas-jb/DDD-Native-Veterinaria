@@ -6,7 +6,5 @@ j
 :src/main/java/co/com/sofka/paciente/Values/IdPacuente.java,e\c\ecc84044c2faf38eca4fd310927cdb0fe7b74e54
 i
 9src/main/java/co/com/sofka/paciente/Values/Microchip.java,9\1\918ef30a2cd76754a6ff97aa63c681aacac2017a
-r
-Bsrc/main/java/co/com/sofka/atencionVeterinaria/HistoriClinica.java,b\4\b41cdc47fd63bc42e542874b764a6079c5146719
 
 Osrc/main/java/co/com/sofka/profesional/event/telefonoDeAuxiliarActualizado.java,0\9\090ee0ccf5008a2fa2188101c567e114d736e641

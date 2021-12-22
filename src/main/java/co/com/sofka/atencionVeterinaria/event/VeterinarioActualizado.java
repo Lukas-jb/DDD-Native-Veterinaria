@@ -4,11 +4,11 @@ import co.com.sofka.atencionVeterinaria.Values.IdVeterinario;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.paciente.Values.IdAtencion;
 
-public class veterinarioActualizado extends DomainEvent {
+public class VeterinarioActualizado extends DomainEvent {
     private final IdVeterinario IdVeterinario;
     private final IdAtencion IdAtencion;
 
-    public veterinarioActualizado(IdAtencion entityId, IdVeterinario idVeterinario) {
+    public VeterinarioActualizado(IdAtencion entityId, IdVeterinario idVeterinario) {
         super("sofka.paciente.veterinarioactualizado");
         this.IdAtencion =entityId;
         this.IdVeterinario=idVeterinario;

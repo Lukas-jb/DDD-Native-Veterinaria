@@ -24,12 +24,12 @@ public class profesionalChange extends EventChange {
             profesional.medicosVeterinario.tarjetaProfesional = event.getTarjetaProfesional();
             profesional.medicosVeterinario.telefono = event.getTelefono();
         });
-        apply((nombreDeAuxiliarActualizado event) -> {
+        apply((NombreDeAuxiliarActualizado event) -> {
             var funcion = profesional.getAuxiliarVeterinario(event.getCedula())
                     .orElseThrow(() -> new IllegalArgumentException("No se encuentra el auxiliar veterinario"));
             funcion.ActualizarNombre(event.getNomre());
         });
-        apply((telefonoDeVeterinarioActualizado event) -> {
+        apply((TelefonoDeVeterinarioActualizado event) -> {
             profesional.medicosVeterinario.telefono = event.getTelefono();
         });
 

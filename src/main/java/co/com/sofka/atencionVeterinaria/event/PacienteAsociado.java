@@ -4,7 +4,7 @@ import co.com.sofka.atencionVeterinaria.Values.IdPaciente;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.paciente.Values.IdAtencion;
 
-public class pacienteAsociado extends DomainEvent {
+public class PacienteAsociado extends DomainEvent {
     private final IdPaciente IdPaciente;
     private final IdAtencion IdAtencion;
 
@@ -12,7 +12,7 @@ public class pacienteAsociado extends DomainEvent {
         return IdAtencion;
     }
 
-    public pacienteAsociado(IdAtencion entityId, IdPaciente idPaciente) {
+    public PacienteAsociado(IdAtencion entityId, IdPaciente idPaciente) {
         super("sofka.atencionveterinaria.pacienteasociado");
         this.IdAtencion= entityId;
         this.IdPaciente=idPaciente;
