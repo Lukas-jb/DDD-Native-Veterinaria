@@ -2,5 +2,5 @@ package co.com.sofka.paciente.Values;
 
 import co.com.sofka.domain.generic.Identity;
 
-public class IdPacuente extends Identity {
+public class IdPaciente extends Identity {
 }

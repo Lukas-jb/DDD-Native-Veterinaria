@@ -20,8 +20,6 @@ i
 9src/main/java/co/com/sofka/profesional/Values/Cedula.java,1\7\1769a5843de73ceff5c09d056b3aa54b554454ef
 u
 Esrc/main/java/co/com/sofka/profesional/Values/TarjetaProfesional.java,7\4\7476481259c6808a5735ca86589a759ec639780f
-p
-@src/main/java/co/com/sofka/profesional/Values/IdProfecional.java,9\9\9988ca2d32ca6731495243dbde80bbea3f314625
 j
 :src/main/java/co/com/sofka/paciente/Values/IdAtencion.java,b\3\b365098b2fa12f25909a84ff8a99016f6065fdaa
 i
@@ -50,18 +48,10 @@ q
 Asrc/main/java/co/com/sofka/atencionVeterinaria/FormulaMedica.java,8\f\8fb4242dbb5546cdfc222af73a258bbd2b9054b6
 z
 Jsrc/main/java/co/com/sofka/profesional/nombreDeVeterinarioActualizado.java,3\8\38e0e37717be3491e82efb583d0a65ac8a4db8c8
-‚
-Rsrc/main/java/co/com/sofka/profesional/event/telefonoDeVeterinarioActualizado.java,0\c\0c787e118a55139a1795e1133bca2bd3e56d0ad5
 
 Osrc/main/java/co/com/sofka/profesional/event/telefonoDeAuxiliarActualizado.java,0\9\090ee0ccf5008a2fa2188101c567e114d736e641
-}
-Msrc/main/java/co/com/sofka/profesional/event/nombreDeAuxiliarActualizado.java,7\4\744ba6f259500836586dd00efba23ab380ea865f
 €
 Psrc/main/java/co/com/sofka/atencionVeterinaria/event/veterinarioActualizado.java,6\2\62d6301ae2c4b97dcaa1f252c9a896b278852c9f
-w
-Gsrc/main/java/co/com/sofka/atencionVeterinaria/AtencionVeterinaria.java,7\7\7727e91a55609000a51750d81ab724d6c0471326
-†
-Vsrc/main/java/co/com/sofka/atencionVeterinaria/event/AtencionVeterinariaRealizada.java,7\1\7169af6a981cf928632b68496de9f8a60ea75c25
 ‰
 Ysrc/main/java/co/com/sofka/atencionVeterinaria/event/descripcionDeFormulaActualizada.java,f\c\fc9c19f97863812ffb746c718f89025ab1ceeebf
 €

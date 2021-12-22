@@ -10,7 +10,7 @@ public class telefonoDeVeterinarioActualizado extends DomainEvent {
         super("sofka.profesional.telefonoDeVeterinarioActualizado");
         this.Telefono=telefono;
     }
-    public co.com.sofka.Generic.Telefono Telefono() {
+    public co.com.sofka.Generic.Telefono getTelefono() {
         return Telefono;
     }
 }

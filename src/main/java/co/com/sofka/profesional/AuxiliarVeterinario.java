@@ -9,26 +9,29 @@ import java.util.Objects;
 
 public class AuxiliarVeterinario extends Entity<Cedula> {
 
-    private  Nombre nombre;
-    private  Telefono telefono;
+    protected Nombre nombre;
+    protected Telefono telefono;
 
     public AuxiliarVeterinario(Cedula entityId, Nombre nombre, Telefono telefono) {
         super(entityId);
         this.nombre = nombre;
         this.telefono = telefono;
     }
-    public void ActualizarNombre(Nombre nombre){
+
+    public void ActualizarNombre(Nombre nombre) {
         this.nombre = Objects.requireNonNull(nombre);
     }
-    public void ActualizarTelefono(Telefono telefono){
+
+    public void ActualizarTelefono(Telefono telefono) {
         this.telefono = Objects.requireNonNull(telefono);
     }
 
-    public Nombre Nombre() {
+    public Nombre getNombre() {
         return nombre;
     }
 
-    public Telefono Telefono() {
+    public Telefono getTelefonoelefono() {
         return telefono;
     }
+
 }
