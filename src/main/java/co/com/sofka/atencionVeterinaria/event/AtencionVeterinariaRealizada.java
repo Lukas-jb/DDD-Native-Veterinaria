@@ -12,7 +12,7 @@ public class AtencionVeterinariaRealizada extends DomainEvent {
     protected  HistoriClinica historiClinica;
     protected  FormulaMedica formulaMedica;
 
-    public AtencionVeterinariaRealizada(IdAtencion entityId, HistoriClinica historiClinica, FormulaMedica formulaMedica) {
+    public AtencionVeterinariaRealizada(IdAtencion entityId, HistoriClinica historiClinica) {
         super("sofka.AtencionVeterinaria.AtencionVeterinariaRealizada");
 
         this.entityId = entityId;

@@ -10,6 +10,7 @@ import co.com.sofka.profesional.Values.TarjetaProfesional;
 import co.com.sofka.profesional.event.*;
 
 import java.security.cert.CertSelector;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -30,6 +31,11 @@ public class Profesional extends AggregateEvent<IdProfecional> {
         subscribe(new profesionalChange(this));
     }
 
+    public static Profesional from(IdProfecional idProfecional, List<DomainEvent> enets){
+        var profesional=new Profesional(idProfecional);
+        enets.forEach(profesional::applyEvent);
+        return  profesional;
+    }
 
     public void AgregarAuxiliarVeterinario(Cedula entityId, Nombre nombre, Telefono telefono) {
         Objects.nonNull(entityId);
@@ -43,18 +49,19 @@ public class Profesional extends AggregateEvent<IdProfecional> {
         appendChange(new nombreDeAuxiliarActualizado(entityId, nombre)).apply();
     }
 
-    public void actualizarNombreVeterinario(Nombre nombre) {
+    public void actualizarNombreVeterinario(Cedula entityId,Nombre nombre) {
+        Objects.nonNull(entityId);
         Objects.nonNull(nombre);
-        appendChange(new nombreDeVeterinarioActualizado(nombre)).apply();
+        appendChange(new nombreDeVeterinarioActualizado(entityId,nombre)).apply();
     }
 
-    public void actualizarTelefonoVeterinario(Telefono telefono) {
+    public void actualizarTelefonoVeterinario(Cedula entityId,Telefono telefono) {
         Objects.nonNull(telefono);
-        appendChange(new telefonoDeVeterinarioActualizado(telefono)).apply();
+        appendChange(new telefonoDeVeterinarioActualizado(entityId, telefono)).apply();
     }
 
 
-    public Optional<AuxiliarVeterinario> getAuxiliarVeterinario(Cedula entityId) {
+    protected Optional<AuxiliarVeterinario> getAuxiliarVeterinario(Cedula entityId) {
         return auxiliaresVeterinarios
                 .stream()
                 .filter(pofesional -> pofesional.identity().equals(entityId))

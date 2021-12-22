@@ -5,12 +5,12 @@ import co.com.sofka.atencionVeterinaria.Values.Descripcion;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.paciente.Values.IdAtencion;
 
-public class FortmulaMedicaAgregada extends DomainEvent {
+public class fortmulaMedicaAgregada extends DomainEvent {
     private final IdAtencion entityId;
     private final Fecha fecha;
     private  Descripcion descripcion;
 
-    public FortmulaMedicaAgregada(IdAtencion entityId, Fecha fecha, Descripcion descripcion) {
+    public fortmulaMedicaAgregada(IdAtencion entityId, Fecha fecha, Descripcion descripcion) {
         super("sofka.atencionveterinaria.fortmulamedicamgregada");
         this.entityId = entityId;
         this.fecha = fecha;
