@@ -58,13 +58,13 @@ public class Paciente extends AggregateEvent<IdPaciente> {
         appendChange(new mascotaAgregada(entityId, sexo, nombre, especie)).apply();
     }
 
-    public void actualizarNombreDePropietario(Nombre nombre) {
+    public void actualizarNombreDePropietario(IdPropietario entityId,Nombre nombre) {
         Objects.requireNonNull(nombre);
-        appendChange(new nombreDelPropietarioActualizado(nombre)).apply();
+        appendChange(new nombreDelPropietarioActualizado(entityId,nombre)).apply();
     }
 
-    public void actualizarTelefonoPropietario(Telefono telefono) {
+    public void actualizarTelefonoPropietario(IdPropietario entityId ,Telefono telefono) {
         Objects.requireNonNull(telefono);
-        appendChange(new telefonoDelPropietarioActualizado(telefono)).apply();
+        appendChange(new telefonoDelPropietarioActualizado(entityId,telefono)).apply();
     }
 }

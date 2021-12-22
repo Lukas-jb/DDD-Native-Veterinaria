@@ -43,26 +43,26 @@ public class AtencionVeterinaria extends AggregateEvent<IdAtencion> {
         Objects.nonNull(descripcion);
         appendChange(new fortmulaMedicaAgregada(entityId, fecha, descripcion)).apply();
     }
-    public void asociarPaciente(co.com.sofka.atencionVeterinaria.Values.IdPaciente idPaciente){
+    public void asociarPaciente(IdAtencion entityId,IdPaciente idPaciente){
         Objects.nonNull(idPaciente);
-        appendChange(new pacienteAsociado(idPaciente)).apply();
+        appendChange(new pacienteAsociado(entityId,idPaciente)).apply();
     }
-    public void asociarProfecional (IdVeterinario idProfecional){
+    public void asociarProfecional (IdAtencion entityId,IdVeterinario idProfecional){
         Objects.nonNull(idProfecional);
-        appendChange(new profecionalAsociado(idProfecional)).apply();
+        appendChange(new profecionalAsociado(entityId,idProfecional)).apply();
     }
-    public void actualizarVeterinario(IdVeterinario idVeterinario){
+    public void actualizarVeterinario(IdAtencion entityId,IdVeterinario idVeterinario){
         Objects.nonNull(idVeterinario);
-        appendChange(new veterinarioActualizado(idVeterinario)).apply();
+        appendChange(new veterinarioActualizado(entityId,idVeterinario)).apply();
     }
-    public void actualizarDescripcionFormula(Descripcion descripcion){
+    public void actualizarDescripcionFormula(IdAtencion entityId,Descripcion descripcion){
         Objects.nonNull(descripcion);
-        appendChange(new descripcionDeFormulaActualizada(descripcion)).apply();
+        appendChange(new descripcionDeFormulaActualizada(entityId,descripcion)).apply();
     }
 
-    public void agregarreportehostoriaclinica(Reporte reporte){
+    public void agregarreportehostoriaclinica(IdAtencion entityId,Reporte reporte){
         Objects.nonNull(reporte);
-        appendChange(new ReporteDeHistoriaClinicaActualizado(reporte)).apply();
+        appendChange(new ReporteDeHistoriaClinicaActualizado(entityId,reporte)).apply();
     }
 
 }

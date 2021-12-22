@@ -46,7 +46,3 @@ r
 Bsrc/main/java/co/com/sofka/atencionVeterinaria/HistoriClinica.java,b\4\b41cdc47fd63bc42e542874b764a6079c5146719
 
 Osrc/main/java/co/com/sofka/profesional/event/telefonoDeAuxiliarActualizado.java,0\9\090ee0ccf5008a2fa2188101c567e114d736e641
-â
-Ysrc/main/java/co/com/sofka/atencionVeterinaria/event/descripcionDeFormulaActualizada.java,f\c\fc9c19f97863812ffb746c718f89025ab1ceeebf
-ç
-]src/main/java/co/com/sofka/atencionVeterinaria/event/ReporteDeHistoriaClinicaActualizado.java,1\d\1dcfc439f1a50697c8ca5652229bcc7ae23ecfe5
